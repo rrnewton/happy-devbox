@@ -22,3 +22,11 @@
 # 	default = matching # historical default
 [pull]
 	rebase = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = "!f() { /root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node /tmp/vscode-remote-containers-101f1282-28cf-4301-bd8a-e90597ab6fee.js git-credential-helper $*; }; f"
